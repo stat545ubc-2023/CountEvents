@@ -26,7 +26,6 @@
 
 count_events <- function(data, var1, var2) {
 
-  library(dplyr)
   # Check if data is a data frame or Tibble
   if (!is.data.frame(data) && !is(data, "tbl_df")) {
     stop("Input 'data' must be a data frame or Tibble.")
