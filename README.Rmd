@@ -15,50 +15,33 @@ knitr::opts_chunk$set(
 
 # CountEvents
 
-The goal of Count Events is to count events in a data frame using two variable
+The goal of `CountEvents` is to take a data frame or Tibble, and two variable names as argument.
 
-This function takes a data frame or Tibble, and two variable names as arguments. It performs data validation, filtering out rows with missing values. counts the number of events in the data, grouped by the two specified variables, and returns the result as a data frame.
+It performs data validation, filtering out rows with missing values. Then, counts the number of events in the data, grouped by the two specified variables, and returns the result as a data frame
 
 ## Installation
 
-You can install the development version of CountEvents from [GitHub](https://github.com/) with:
+You can install the development version of `CountEvents` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2023/assignment-b2-jmfvieira11")
+devtools::install_github("stat545ubc-2023/CountEvents")
 ```
 
-## Examples
+## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to use `CountEvents`:
 
 ```{r example}
-## Some examples of CountEvents application
-
-# Load different libraries to use in the examples
 library(CountEvents)
-suppressPackageStartupMessages(library(datateachr)) # <- data for example
-suppressPackageStartupMessages(library(palmerpenguins))
+library(palmerpenguins)
+suppressPackageStartupMessages(library(dplyr))
 
-#### Using the penguins data
+
+### *Using the penguins data*
+
 # How many penguins of each species per island in the data??
-
 specie_by_island <- count_events(penguins, species, island)
 print(specie_by_island)
 
-### Using the vancouver_tree data
-
-# How many trees of each species by the different genus names in the data?
-tress_by_species <- count_events(vancouver_trees, genus_name, species_name)
-print(tress_by_species)
-
-
-###Using the parking_meters data
-
-# How many meter head types per localization in the data?
-headtype_by_location <- count_events(parking_meters, geo_local_area, meter_head)
-print(headtype_by_location)
-
 ```
-
-

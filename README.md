@@ -1,19 +1,14 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # CountEvents
 
-The goal of `CountEvents` is to take a data frame or Tibble, and two
-variable names as argument.
+The goal of `CountEvents` is to take a data frame or Tibble, and two variable names as argument.
 
-It performs data validation, filtering out rows with missing values.
-Then, counts the number of events in the data, grouped by the two
-specified variables, and returns the result as a data frame
+It performs data validation, filtering out rows with missing values. Then, counts the number of events in the data, grouped by the two specified variables, and returns the result as a data frame
 
 ## Installation
 
-You can install the development version of `CountEvents` from
-[GitHub](https://github.com/) with:
+You can install the development version of `CountEvents` from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
