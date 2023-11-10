@@ -1,6 +1,6 @@
 Package: CountEvents
 Title: Count events in a data frame using two variable
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Juliana", "Vieira", ,"zi_nha@hotmail.com", role = c("aut", "cre"))
 Description: This function takes a data frame or Tibble, and two variable names as argument.

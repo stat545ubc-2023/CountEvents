@@ -12,6 +12,9 @@
 #' @return A data frame containing counts of events for each unique combination of
 #'   the specified variables.
 #'
+#' @import dplyr
+#' @import tidyr
+#' 
 #' @examples
 #' # Example usage:
 #' library(dplyr)
@@ -19,10 +22,11 @@
 #' my_result <- count_events(my_data, var1, var2)
 #'
 #' @export
-#' 
+#
 
 count_events <- function(data, var1, var2) {
 
+  library(dplyr)
   # Check if data is a data frame or Tibble
   if (!is.data.frame(data) && !is(data, "tbl_df")) {
     stop("Input 'data' must be a data frame or Tibble.")
