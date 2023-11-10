@@ -21,10 +21,11 @@ test_that("count_events function handles invalid input", {
   var3 <- c(1, 2, 3, 4, 5)
 
   #using penguins as dataset
-  library(palmerpenguins)
+  data0 <- data.frame(var1 = c("1", "1", "2", "2", "1", "2"),
+                      var2 = c("X", "Y", "X", "X", "Y", "Y"))
 
-  expect_error(count_events(palmerpenguins::penguins, var3, island), "Variables 'var1' must exist in the input data.") # var3 is not in the dataset, thus an error is expected for var1
-  expect_error(count_events(palmerpenguins::penguins, species, var3), "Variables 'var2' must exist in the input data.") # var3 is not in the dataset, thus an error is expected for var2
+  expect_error(count_events(data0, var3, var2), "Variables 'var1' must exist in the input data.") # var3 is not in the dataset, thus an error is expected for var1
+  expect_error(count_events(data0, var1, var3), "Variables 'var2' must exist in the input data.") # var3 is not in the dataset, thus an error is expected for var2
 })
 
 # ***Test 3.*** I will check if the function correctly counts events by 'var1' and 'var2'

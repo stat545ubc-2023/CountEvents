@@ -3,9 +3,9 @@ Title: Count events in a data frame using two variable
 Version: 0.0.0.9000
 Authors@R: 
     person("Juliana", "Vieira", ,"zi_nha@hotmail.com", role = c("aut", "cre"))
-Description: This function takes a data frame or Tibble, and two variable names as argument
-    It performs data validation, filtering out rows with missing values
-    Then, counts the number of events in the data, grouped by the two specified variables, and returns the result as a data frame
+Description: This function takes a data frame or Tibble, and two variable names as argument.
+    It performs data validation, filtering out rows with missing values.
+    Then, counts the number of events in the data, grouped by the two specified variables, and returns the result as a data frame.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

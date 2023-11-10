@@ -19,6 +19,7 @@
 #' my_result <- count_events(my_data, var1, var2)
 #'
 #' @export
+#' 
 
 count_events <- function(data, var1, var2) {
 
